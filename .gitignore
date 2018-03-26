@@ -1,6 +1,8 @@
 .idea/
 .DS_Store
 node_modules/
-/example/
-!/example/index.hbs
-!/example/main.js
+example/index.*
+example/main.*
+example/style.*
+!example/index.hbs
+!example/main.js
