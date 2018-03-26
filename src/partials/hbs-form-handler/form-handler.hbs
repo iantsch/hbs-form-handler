@@ -1,0 +1,95 @@
+<form id="{{form.attributes.id}}" action="{{form.attributes.action}}" method="{{form.attributes.method}}" class="form form--{{form.attributes.modifier}}">
+  <div class="form__field form__field--content">
+    <h2 class="form__title title">
+      <span class="title__pre">{{form.content.hl.pre}}</span>
+      <span class="title__text">{{form.content.hl.text}}</span>
+      <span class="title__post">{{form.content.hl.post}}</span>
+    </h2>
+    <div class="form__copy">
+      {{{form.content.copy}}}
+    </div>
+  </div>
+  <div class="form__field form__field--gender" {{form.attributes.error}}="{{form.content.gender.error}}">
+  <label class="form__label" for="{{form.attributes.id}}-gender">{{form.content.gender.label}}</label>
+  {{#each form.content.gender.options}}
+    <div class="form__field form__field--radio">
+      <input type="radio" class="form__input form__input--radio" name="gender" id="{{../form.attributes.id}}-gender-{{@key}}" value="{{@key}}">
+      <label for="{{../form.attributes.id}}-gender-{{@key}}" class="form__label">{{this}}</label>
+    </div>
+  {{/each}}
+  </div>
+  <div class="form__field form__field--first_name" {{form.attributes.error}}="{{form.content.first_name.error}}">
+    <input type="text" class="form__input form__input--text" name="first_name" id="{{form.attributes.id}}-first_name" placeholder="{{form.content.first_name.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-first_name">{{form.content.first_name.label}}</label>
+  </div>
+  <div class="form__field form__field--last_name" {{form.attributes.error}}="{{form.content.last_name.error}}">
+    <input type="text" class="form__input form__input--text" name="last_name" id="{{form.attributes.id}}-last_name" placeholder="{{form.content.last_name.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-last_name">{{form.content.last_name.label}}</label>
+  </div>
+  <div class="form__field form__field--email" {{form.attributes.error}}="{{form.content.email.error}}">
+    <input type="email" class="form__input form__input--text" name="email" id="{{form.attributes.id}}-email" placeholder="{{form.content.email.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-email">{{form.content.email.label}}</label>
+  </div>
+  <div class="form__field form__field--birthday date" {{form.attributes.error}}="{{form.content.birthday.error}}" data-min_age="{{form.content.birthday.min_age}}">
+    <label class="form__label" for="{{form.attributes.id}}-birthday">{{form.content.birthday.label}}</label>
+    <div class="form__field form__field--day" {{form.attributes.error}}="{{form.content.birthday.day.error}}">
+      <select name="birthday-day" id="{{form.attributes.id}}-birthday-day" class="date__day form__input form__input--select">
+        <option value="" selected disabled>{{form.content.birthday.day.label}}</option>
+        {{#for 1 '<=' 31 1}}
+          <option value="{{this}}">{{this}}</option>
+        {{/for}}
+      </select>
+      <label class="form__label" for="{{form.attributes.id}}-birthday-day">{{form.content.birthday.day.label}}</label>
+    </div>
+    <div class="form__field form__field--month" {{form.attributes.error}}="{{form.content.birthday.month.error}}">
+      <select name="birthday-month" id="{{form.attributes.id}}-birthday-month" class="date__month form__input form__input--select">
+        <option value="" selected disabled>{{form.content.birthday.month.label}}</option>
+        {{#for 1 '<=' 12 1}}
+          <option value="{{this}}">{{this}}</option>
+        {{/for}}
+      </select>
+      <label class="form__label" for="{{form.attributes.id}}-birthday-month">{{form.content.birthday.month.label}}</label>
+    </div>
+    <div class="form__field form__field--year" {{form.attributes.error}}="{{form.content.birthday.year.error}}">
+      <select name="birthday-year" id="{{form.attributes.id}}-birthday-year" class="date__year form__input form__input--select">
+        <option value="" selected disabled>{{form.content.birthday.year.label}}</option>
+        {{#for 2018 '>=' 1918 -1}}
+          <option value="{{this}}">{{this}}</option>
+        {{/for}}
+      </select>
+      <label class="form__label" for="{{form.attributes.id}}-birthday-year">{{form.content.birthday.year.label}}</label>
+    </div>
+  </div>
+  <div class="form__field form__field--street" {{form.attributes.error}}="{{form.content.street.error}}">
+    <input type="text" class="form__input form__input--text" name="street" id="{{form.attributes.id}}-street" placeholder="{{form.content.street.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-street">{{form.content.street.label}}</label>
+  </div>
+  <div class="form__field form__field--streetnr" {{form.attributes.error}}="{{form.content.streetnr.error}}">
+    <input type="text" class="form__input form__input--text" name="streetnr" id="{{form.attributes.id}}-streetnr" placeholder="{{form.content.streetnr.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-streetnr">{{form.content.streetnr.label}}</label>
+  </div>
+  <div class="form__field form__field--postalcode" {{form.attributes.error}}="{{form.content.postalcode.error}}">
+    <input type="text" class="form__input form__input--text" name="postalcode" id="{{form.attributes.id}}-postalcode" placeholder="{{form.content.postalcode.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-postalcode">{{form.content.postalcode.label}}</label>
+  </div>
+  <div class="form__field form__field--locality" {{form.attributes.error}}="{{form.content.locality.error}}">
+    <input type="text" class="form__input form__input--text" name="locality" id="{{form.attributes.id}}-locality" placeholder="{{form.content.locality.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-locality">{{form.content.locality.label}}</label>
+  </div>
+  <div class="form__field form__field--terms form__field--checkbox" {{form.attributes.error}}="{{form.content.terms.error}}">
+    <input type="checkbox" class="form__input form__input--checkbox" name="terms" id="{{form.attributes.id}}-terms" placeholder="{{form.content.terms.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-terms">{{{form.content.terms.label}}}</label>
+  </div>
+  <div class="form__field form__field--newsletter form__field--checkbox" {{form.attributes.error}}="{{form.content.newsletter.error}}">
+    <input type="checkbox" class="form__input form__input--checkbox" name="newsletter" id="{{form.attributes.id}}-newsletter" placeholder="{{form.content.newsletter.label}}">
+    <label class="form__label" for="{{form.attributes.id}}-newsletter">{{{form.content.newsletter.label}}}</label>
+  </div>
+  <div class="form__field form__field--required">
+    <p>{{form.content.required.label}}</p>
+  </div>
+  <div class="form__field form__field--submit">
+    <button type="submit" class="form__input form__input--submit button button--submit">
+      {{form.content.submit.label}}
+    </button>
+  </div>
+</form>

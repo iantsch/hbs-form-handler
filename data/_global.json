@@ -1,0 +1,104 @@
+{
+  "form": {
+    "template": "form-handler",
+    "attributes": {
+      "id": "form",
+      "action": "",
+      "method": "post",
+      "error": "data-error",
+      "modifier": "default"
+    },
+    "content" : {
+      "hl" : {
+        "pre" : "Pre",
+        "text": "Headline",
+        "post" : "Post"
+      },
+      "copy" : "<p>I'm a descriptive text about this form</p>",
+      "gender" : {
+        "label" : "Salutation*",
+        "error" : "Please select a salutation.",
+        "options" : {
+          "m" : "Mr",
+          "f" : "Mrs"
+        }
+      },
+      "first_name" : {
+        "label" : "First name*",
+        "error" : "Please enter your first name."
+      },
+      "last_name" : {
+        "label" : "Last name*",
+        "error" : "Please enter your last name."
+      },
+      "email" : {
+        "label" : "E-mail address*",
+        "error" : "Please enter your e-mail address."
+      },
+      "birthday" : {
+        "label" : "Birthday*",
+        "min_age" : 18,
+        "error" : "You must be at least 18 years old.",
+        "day": {
+          "label" : "Day",
+          "error" : "Please enter your day of birth."
+        },
+        "month": {
+          "label" : "Month",
+          "error" : "Please enter your month of birth."
+        },
+        "year": {
+          "label" : "Year",
+          "error" : "Please enter your year of birth."
+        }
+      },
+      "street" : {
+        "label" : "Street",
+        "error" : "Please enter your street."
+      },
+      "streetnr" : {
+        "label" : "Nr.",
+        "error" : "Please enter your street number."
+      },
+      "postalcode" : {
+        "label" : "Postal code",
+        "error" : "Please enter your postal code."
+      },
+      "locality" : {
+        "label" : "Locality",
+        "error" : "Please enter your locality."
+      },
+      "terms" : {
+        "label" : "<p>Yes, I accept the terms of services/privacy policy.</p>",
+        "error" : "Please accept the terms of services/privacy policy."
+      },
+      "newsletter" : {
+        "label" : "<p>Yes, I want to subscribe to your newsletter.</p>"
+      },
+      "required" : {
+        "label" : "* required fields"
+      },
+      "submit" : {
+        "label" : "Send"
+      }
+    },
+    "success" : {
+      "template": "success",
+      "hl" : {
+        "pre" : "Pre",
+        "text": "Success",
+        "post" : "Post"
+      },
+      "copy" : "<p>Thank you text will be shown here.</p>"
+    },
+    "error" : {
+      "template": "error",
+      "hl" : {
+        "pre" : "Pre",
+        "text": "Error",
+        "post" : "Post"
+      },
+      "copy" : "<p>Error text will be shown here.</p>"
+    }
+  }
+}
