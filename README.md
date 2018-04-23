@@ -1,6 +1,6 @@
 # Handlebars Form Handler
 
-[![licence](https://img.shields.io/badge/licence-MIT-blue.svg?style=flat-square)]() [![tag](https://img.shields.io/badge/tag-v0.0.1-lightgrey.svg?style=flat-square)]()
+[![licence](https://img.shields.io/badge/licence-MIT-blue.svg?style=flat-square)]() [![tag](https://img.shields.io/badge/tag-v0.0.4-lightgrey.svg?style=flat-square)]()
 
 A form handler built in ES6 and handlebars. Developed for [webpack-handlebars-static-file-generator](https://github.com/francbelak/webpack-handlebars-static-file-generator).
 
