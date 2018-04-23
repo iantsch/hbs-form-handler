@@ -35,27 +35,27 @@
     <div class="form__field form__field--day" {{form.attributes.error}}="{{form.content.birthday.day.error}}">
       <select name="birthday-day" id="{{form.attributes.id}}-birthday-day" class="date__day form__input form__input--select">
         <option value="" selected disabled>{{form.content.birthday.day.label}}</option>
-        {{#for 1 '<=' 31 1}}
+        {{#[hbs-form-handler/for] 1 '<=' 31 1}}
           <option value="{{this}}">{{this}}</option>
-        {{/for}}
+        {{/[hbs-form-handler/for]}}
       </select>
       <label class="form__label" for="{{form.attributes.id}}-birthday-day">{{form.content.birthday.day.label}}</label>
     </div>
     <div class="form__field form__field--month" {{form.attributes.error}}="{{form.content.birthday.month.error}}">
       <select name="birthday-month" id="{{form.attributes.id}}-birthday-month" class="date__month form__input form__input--select">
         <option value="" selected disabled>{{form.content.birthday.month.label}}</option>
-        {{#for 1 '<=' 12 1}}
+        {{#[hbs-form-handler/for] 1 '<=' 12 1}}
           <option value="{{this}}">{{this}}</option>
-        {{/for}}
+        {{/[hbs-form-handler/for]}}
       </select>
       <label class="form__label" for="{{form.attributes.id}}-birthday-month">{{form.content.birthday.month.label}}</label>
     </div>
     <div class="form__field form__field--year" {{form.attributes.error}}="{{form.content.birthday.year.error}}">
       <select name="birthday-year" id="{{form.attributes.id}}-birthday-year" class="date__year form__input form__input--select">
         <option value="" selected disabled>{{form.content.birthday.year.label}}</option>
-        {{#for 2018 '>=' 1918 -1}}
+        {{#[hbs-form-handler/for] 2018 '>=' 1918 -1}}
           <option value="{{this}}">{{this}}</option>
-        {{/for}}
+        {{/[hbs-form-handler/for]}}
       </select>
       <label class="form__label" for="{{form.attributes.id}}-birthday-year">{{form.content.birthday.year.label}}</label>
     </div>

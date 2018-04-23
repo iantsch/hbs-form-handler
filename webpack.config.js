@@ -56,14 +56,14 @@ module.exports = {
         }, {
           loader: 'handlebars-entry-loader',
           options: {
-            partials: 'src/partials/**/*.hbs',
-            helpers: 'helpers/**/*.helper.js',
+            partials: 'src/templates/partials/**/*.hbs',
+            helpers: 'src/helpers/**/*.helper.js',
             data: 'data/_global.json',
             partialNamer: function(helper) {
-              return helper.replace('src/partials/', '').replace('.hbs', '');
+              return helper.replace('src/templates/partials/', '').replace('.hbs', '');
             },
             helperNamer: function(helper) {
-              return helper.replace('helpers/hbs-form-handler/', '').replace('.helper.js', '');
+              return helper.replace('src/helpers/', '').replace('.helper.js', '');
             }
           }
         }
