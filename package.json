@@ -1,6 +1,6 @@
 {
   "name": "hbs-form-handler",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Form handler for handlebars",
   "main": "webpack.config.js",
   "devDependencies": {

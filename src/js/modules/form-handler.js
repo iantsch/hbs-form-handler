@@ -2,8 +2,10 @@ import 'whatwg-fetch';
 
 export default class FormHandler {
   constructor(...args) {
+    this.isListening = false;
     this.settings = Object.assign({
       url: './',
+      listen: true,
       form: document.querySelector('.form'),
       beforeSubmit: event => {
         event.preventDefault();
@@ -15,9 +17,26 @@ export default class FormHandler {
         console.error(error);
       }
     }, ...args);
-    console.log(this.settings);
     this.onSubmit = this.onSubmit.bind(this);
+    if (this.settings.listen) {
+      this.listen();
+    }
+  }
+
+  listen() {
+    if (this.isListening) {
+      return;
+    }
     this.settings.form.addEventListener('submit', this.onSubmit);
+    this.isListening = true;
+  }
+
+  stopListen() {
+    if (!this.isListening) {
+      return;
+    }
+    this.settings.form.removeEventListener('submit', this.onSubmit);
+    this.isListening = false;
   }
 
   onSubmit(event) {
